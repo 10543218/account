@@ -28,7 +28,7 @@
 				margin: -8px;
 				padding: 0px;
 				text-align: center;
-				visibility: hidden;
+				<!-- visibility: hidden; -->
 			}
 			
 			.black{
@@ -43,14 +43,11 @@
 			.prompt{
 				color: white;
 				font-size: 40px;
-				margin-top: 45px;
 			}
 			
 			.nameInput, .accountInput, .passwordInput{
 				background-color: black	;
-				margin-top: 40px;
-				width: 500px;
-				height: 60px;
+				width: 80%;
 				font-size: 20px;
 				color: white;
 				text-align: center;
@@ -62,12 +59,12 @@
 			
 			.button{
 				margin-top: 40px;
-				width: 300px;
-				height: 60px;
+				width: 50%;
 				font-size: 20px;
 				text-align: center;
-				border:2px green solid;
+				border:2px white solid;
 				outline:none;
+				color: purple;
 			}
 			
 			.registerAccount{
@@ -78,23 +75,116 @@
 			}
 			
 			.nameInput:hover{
-				width: 370px;
+				width: 40%;
 			}
 			
 			.accountInput:hover{
-				width: 370px;
+				width: 40%;
 			}
 			.passwordInput:hover{
-				width: 370px;
+				width: 40%;
 			}
 			
 			.button:hover{
-				font-size: 24px;
+				background-color: purple;
+				border:2px purple solid;
+				color: white;
 			}
 			
 
 			::-webkit-input-placeholder { color: yellow; }
-			:hover::-webkit-input-placeholder { color: white;font-size: 26px; }
+			:hover::-webkit-input-placeholder { color: white; }
+		
+		
+		@media(min-width: 300px){
+			.prompt{
+				margin-top: 2%;
+				font-size: 14px;
+			}
+			
+			.nameInput, .accountInput, .passwordInput{
+				height: 8%;
+				margin-top: 5%;
+				font-size: 10px;
+			}
+			
+			
+			.button{
+				height: 10%;
+				margin-top: 7%;
+				font-size: 10px;
+			}
+		}
+		
+		@media(min-width: 375px){
+			.prompt{
+				margin-top: 2%;
+				font-size: 14px;
+			}
+			
+			.nameInput, .accountInput, .passwordInput{
+				height: 8%;
+				margin-top: 5%;
+				font-size: 12px;
+			}
+			
+			
+			.button{
+				height: 10%;
+				margin-top: 7%;
+				font-size: 14px;
+			}
+		}
+			
+			
+		@media(min-width: 576px){
+			.prompt{
+				margin-top: 2%;
+			}
+			
+			.nameInput, .accountInput, .passwordInput{
+				height: 8%;
+				margin-top: 6%;
+			}
+			
+			
+			.button{
+				height: 10%;
+				margin-top: 5%;
+			}
+		}
+		
+		@media(min-width: 768px){
+			.prompt{
+				margin-top: 4%;
+			}
+			
+			.nameInput, .accountInput, .passwordInput{
+				height: 8%;
+				margin-top: 6%;
+			}
+			
+			
+			.button{
+				height: 10%;
+			}
+		}
+		
+		@media(min-width: 992px){
+			.prompt{
+				margin-top: 5%;
+			}
+			
+			.nameInput, .accountInput, .passwordInput{
+				height: 10%;
+				margin-top: 5%;
+			}
+			
+			.button{
+				height: 10%;
+			}
+		}
+			
 		</style>
 	</head>
 	<body>
@@ -104,9 +194,10 @@
 				<input class="nameInput" type="text" placeholder="Enter Name"; ><br>
 				<input class="accountInput" type="text" placeholder="Enter Account"; ><br>
 				<input class="passwordInput" type="text" placeholder="Enter Password"; ><br>
-				<button class="button" onclick="registeredClicked()">loged click me</button>
+				<button class="button" onclick="registeredClicked()">login click me</button>
 			</div>
+			<div style="width:300px;background-color:red;">576px</div>
 		</div>
-		<button onclick="handleClicked()" class="registerAccount" id="registerAccount">帳號登入</button>
+		<!-- <button onclick="handleClicked()" class="registerAccount" id="registerAccount">帳號登入</button> -->
 	</body>
 </html>
