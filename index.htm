@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>index</title>
+		<script type="text/javascript">
+			let handleClicked = () => {
+				let all = document.getElementById("all");
+				all.style.visibility = "visible";
+				let registerAccount = document.getElementById("registerAccount");
+				registerAccount.style.visibility = "hidden";
+			}
+			let registeredClicked = () => {
+				alert("success registered!!!");
+				let all = document.getElementById("all");
+				all.style.visibility = "hidden";
+				let registerAccount = document.getElementById("registerAccount");
+				registerAccount.style.visibility = "visible";
+			}
+		</script>
+		
+		<style>
+			.all{
+				background-color: #003377;
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				margin: -8px;
+				padding: 0px;
+				text-align: center;
+				visibility: hidden;
+			}
+			
+			.black{
+				position: absolute;
+				top: 10%;
+				left: 10%;
+				background: black;
+				width: 80%;
+				height: 80%;				
+			}
+			
+			.prompt{
+				color: white;
+				font-size: 40px;
+				margin-top: 45px;
+			}
+			
+			.nameInput, .accountInput, .passwordInput{
+				background-color: black	;
+				margin-top: 40px;
+				width: 500px;
+				height: 60px;
+				font-size: 20px;
+				color: white;
+				text-align: center;
+				border-radius:80px;
+				border:2px green solid;
+				outline:none;
+				transition: width 1s;
+			}
+			
+			.button{
+				margin-top: 40px;
+				width: 300px;
+				height: 60px;
+				font-size: 20px;
+				text-align: center;
+				border:2px green solid;
+				outline:none;
+			}
+			
+			.registerAccount{
+				position: absolute;
+				left: 30%;
+				width: 40%;
+				height: 60px;
+			}
+			
+			.nameInput:hover{
+				width: 370px;
+			}
+			
+			.accountInput:hover{
+				width: 370px;
+			}
+			.passwordInput:hover{
+				width: 370px;
+			}
+			
+
+			::-webkit-input-placeholder { color: yellow; }
+			:hover::-webkit-input-placeholder { color: white;font-size: 26px; }
+		</style>
+	</head>
+	<body>
+		<div class="all" id="all">
+			<div class="black">
+				<div class="prompt">Account Login</div>
+				<input class="nameInput" type="text" placeholder="Enter Name"; ><br>
+				<input class="accountInput" type="text" placeholder="Enter Account"; ><br>
+				<input class="passwordInput" type="text" placeholder="Enter Password"; ><br>
+				<button class="button" onclick="registeredClicked()">registered clikc me</button>
+			</div>
+		</div>
+		<button onclick="handleClicked()" class="registerAccount" id="registerAccount">申請帳號</button>
+	</body>
+</html>
